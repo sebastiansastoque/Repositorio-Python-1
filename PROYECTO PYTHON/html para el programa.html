@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FilmFanForum.com</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #header {
+            background-color: purple;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            background-image: url('./img/Poker-PNG-Clipart.png');
+            background-repeat: no-repeat;
+            background-size: 200px;
+            background-position: 200px center; 
+        }
+        #contenido {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        #opiniones {
+            background-color: lightgrey;
+            padding: 20px;
+            margin: 20px;
+            width: 40%;
+        }
+        #comentarios {
+            background-color: lightgrey;
+            padding: 20px;
+            margin-top: 20px;
+            width: 50%;
+        }
+        textarea {
+            width: calc(100% - 22px);
+            height: 100px;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="submit"], select {
+            width: calc(100% - 22px);
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+        input[type="file"] {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <h1>FilmFanForum.com</h1>
+    </div>
+
+    <div id="contenido">
+        <div id="opiniones">
+            <h2>Opiniones sobre películas:</h2>
+            <!-- Aquí se mostrarán las opiniones -->
+        </div>
+
+        <div id="comentarios">
+            <h2>Deja tu opinión:</h2>
+            <form action="#" method="post" enctype="multipart/form-data">
+                <input type="text" name="pelicula" id="pelicula" placeholder="Nombre de la película"><br>
+                <textarea name="opinion" id="opinion" placeholder="Escribe tu opinión aquí"></textarea><br>
+                <label for="recomendacion">Recomendarías esta película:</label>
+                <select name="recomendacion" id="recomendacion">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select><br>
+                <input type="file" name="imagen" id="imagen"><br>
+                <input type="submit" value="Enviar opinión">
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
